@@ -16,12 +16,44 @@
 	<!------------------------------------------------------------------------------ header -->
 	<section class="grey lighten-3">
 		<div class="container" style="padding: 75px 0">
-			<div class="row">
+			<div class="row no-mar">
 				<div class="col s12 m12 l12 center">
 					<img src="https://raw.githubusercontent.com/ivanpriyambudi/ivanpriyambudi.github.io/master/foto.jpg" style="width: 150px; border-radius: 50%; border: 3px solid #fff">
 				</div>
 				<div class="col s12 m12 l12 center">
-					<h5>Ivan Priyambudi</h5>
+					<h4>Ivan Priyambudi</h4>
+					<br>
+				</div>
+
+				<div class="col s12 m12 l12 center">
+					<div id="tab2">
+						<div class="animated fadeIn">
+							<div class="bounce">
+								About Me
+								<br>
+								<a onclick="myDetail()" href="#!" class="but-ic"><i class="material-icons">keyboard_arrow_down</i></a>
+							</div>
+						</div>
+					</div>
+					
+					<div id="tab"></div>
+
+					<div id="detail" style="display: none" style="background-color: transparent;">
+						<div class="animated fadeIn">
+							<h6>About Me</h6>
+							<p>
+								I have 4 years experience in the programming world by working on various freelance projects, I graduated from Darul Ulum 2 Jombang High School and continued at Telkom University and became Assistant Laboratory Enterprise Application Development until now that has influenced learning of Object Oriented Programming, Web Development and Android programming
+							</p>
+						</div>
+					</div>
+
+					<div id="detail2" style="display: none;">
+						<div class="bounce">
+							<a onclick="myClose()" href="#!" class="but-ic"><i class="material-icons">keyboard_arrow_up</i></a>
+							<br>
+							Close
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -459,16 +491,85 @@
 		});
 
 		var elementPosition = $('#navigation').offset();
+		var x = document.getElementById("detail");
+		var i = document.getElementById("detail2");
+
+		const mq = window.matchMedia( "(min-width: 600px)" );
 
 		$(window).scroll(function(){
-			if($(window).scrollTop() > elementPosition.top){
-				$('#navigation').addClass('nav-fix');
-				$('#konten').addClass('kon-scrol');
+			if (mq.matches) {
+				if (x.style.display === "none" || i.style.display === "none") {
+					if($(window).scrollTop() > elementPosition.top){
+						$('#navigation').addClass('nav-fix');
+						$('#konten').addClass('kon-scrol');
+					} else {
+						$('#navigation').removeClass('nav-fix');
+						$('#konten').removeClass('kon-scrol');
+					} 
+				} else {
+					if($(window).scrollTop() > elementPosition.top + 126){
+						$('#navigation').addClass('nav-fix');
+						$('#konten').addClass('kon-scrol');
+					} else {
+						$('#navigation').removeClass('nav-fix');
+						$('#konten').removeClass('kon-scrol');
+					} 
+				}
+				
 			} else {
-				$('#navigation').removeClass('nav-fix');
-				$('#konten').removeClass('kon-scrol');
-			}    
+				if (x.style.display === "none" || i.style.display === "none") {
+					if($(window).scrollTop() > elementPosition.top){
+						$('#navigation').addClass('nav-fix');
+						$('#konten').addClass('kon-scrol');
+					} else {
+						$('#navigation').removeClass('nav-fix');
+						$('#konten').removeClass('kon-scrol');
+					} 
+				} else {
+					if($(window).scrollTop() > elementPosition.top + 250){
+						$('#navigation').addClass('nav-fix');
+						$('#konten').addClass('kon-scrol');
+					} else {
+						$('#navigation').removeClass('nav-fix');
+						$('#konten').removeClass('kon-scrol');
+					} 
+				}
+			}
+
 		});
+
+		function myDetail() {
+			var x = document.getElementById("detail");
+			var y = document.getElementById("tab");
+
+			var i = document.getElementById("detail2");
+			var j = document.getElementById("tab2");
+
+
+			if (x.style.display === "none" || i.style.display === "none") {
+				x.style.display = "block";
+				y.style.display = "none";
+
+				i.style.display = "block";
+				j.style.display = "none";
+			}
+		}
+
+		function myClose() {
+			var x = document.getElementById("detail");
+			var y = document.getElementById("tab");
+
+			var i = document.getElementById("detail2");
+			var j = document.getElementById("tab2");
+
+			if (x.style.display === "block" || i.style.display === "block") {
+				x.style.display = "none";
+				y.style.display = "block";
+
+				i.style.display = "none";
+				j.style.display = "block";
+			}
+		}
 	</script>
 	<!------------------------------------------------------------------------------ /JS -->
 
