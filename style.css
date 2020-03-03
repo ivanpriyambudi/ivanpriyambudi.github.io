@@ -1,0 +1,194 @@
+
+/*div.sticky {
+	position: -webkit-sticky !important;
+	position: sticky !important;
+	top: 0 !important;
+	}*/
+
+
+	.nav-fix {
+		position: fixed;
+		z-index: 1000000;
+		top: 0px;
+		width: 100%;
+		margin: 0;
+		box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
+		transition: 0.5s all;
+	}
+
+	.kon-scrol {
+		margin-top: 48px;
+	}
+
+/*.nav-no-fix {
+	position: static;
+	}*/
+
+	.indi-num {
+		display: flex;
+	}
+
+	.indi-num-3 {
+		padding-left: 20px;
+	}
+
+	.indi-num-2 {
+		font-weight: bold;
+		font-size: 20px;
+		color: #1e88e5;
+	}
+
+	.icon-mar {
+		margin-right: 0px;
+	}
+
+	.link-contact {
+		text-decoration: none;
+		color: #616161;
+		transition: 0.3s all;
+	}
+
+	.link-contact:hover {
+		color: #000;
+	}
+
+	.con-sk-2-a {		
+	}
+
+	.con-sk-2-b {		
+	}
+
+
+	.kanan-2 {
+		text-align: right;
+	}
+
+	.txt-icon {
+		vertical-align:middle;
+	}
+
+	.b-aja {
+		font-size: 25px !important;
+		padding-right: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.b-aj {
+		padding-right: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.txt-sk {
+		font-size: 18px;
+	}
+
+	.con-skill {
+		width: 60%;
+	}
+
+	.con-skill-2 {
+		padding:30px 100px 120px 100px;
+	}
+
+	.card-bor {
+		box-shadow: none;
+		border: 1px solid #eeeeee;
+		border-radius: 8px;
+	}
+
+	.card .card-content-2 {
+		padding: 15px 24px;
+		border-radius: 0 0 2px 2px;
+	}
+
+	.card-content-2 > .row > .kiri {
+		color: #616161;
+		font-size: 18px;
+		text-align: left;
+	}
+
+	.card-content-2 > .row > .kanan {
+		color: #616161;
+		font-size: 15px;
+		text-align: right;
+	}
+
+	.no-mar {
+		margin-bottom: 0 !important;
+	}
+
+	.valign-wrapper-2 {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex !important;
+
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.valign-wrapper-2 {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: block !important;
+
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		.card-content-2 > .row > .kiri {
+			color: #616161;
+			font-size: 18px;
+			text-align: center;
+		}
+
+		.card-content-2 > .row > .kanan {
+			color: #616161;
+			font-size: 15px;
+			text-align: center;
+		}
+
+		.con-skill {
+			width: 100%;
+		}
+
+		.con-skill-2 {
+			padding:30px 0px 0px 0px;
+		}
+
+		.kanan-2 {
+			text-align: left !important;
+		}
+
+		.con-sk-2-a {
+			padding-bottom: 10px !important;
+		}
+
+		.con-sk-2-b {
+			border-top: 1px solid #f0f0f0 !important;
+			padding-top: 5px !important;
+		}
+
+		.icon-mar {
+			margin-right: 100px;
+			margin-left: 0px !important;
+		}
+
+		.nav-fix {
+			position: fixed;
+			z-index: 1000000;
+			top: 0px;
+			margin: 0;
+			width: 100%;
+			box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
+			transition: 0.5s all;
+		}
+	}
